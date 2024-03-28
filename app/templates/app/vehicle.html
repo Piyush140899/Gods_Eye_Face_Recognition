@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+
+{% block content %}
+    <div class="container" style="background-color: white; padding: 50px;border: 4px solid #000000;border-radius: 25px;">
+    <h3>Enter Details</h3>
+
+    <form action="n_plate" method='POST'>
+    {% csrf_token %}
+    <label for="nplate">Enter number plates:</label><br>
+
+    <input type="text" name="nplate" placeholder="MH341212,MH123454">
+    <input type="submit" value="Submit">
+  </form>
+    </div>
+{% endblock %}

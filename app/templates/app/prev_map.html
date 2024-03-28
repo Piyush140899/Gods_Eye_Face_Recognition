@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+
+{% block content %}
+    <div class="container" style="background-color: white; padding: 50px;border: 4px solid #000000;border-radius: 25px;">
+    <h3>Enter Details</h3>
+
+    <form action="map" method='POST'>
+    {% csrf_token %}
+    <label for ="type">Choose a type:</label>
+    <select name="type" id="type">
+      <option value="person">Person</option>
+      <option value="vehicle">Vehicle</option>
+    </select>
+    <br>
+    <label for="myinput">NumberPlate/Person name</label><br>
+    <input type="text" name="myinput">
+    <input type="submit" value="Submit">
+  </form>
+    </div>
+{% endblock %}

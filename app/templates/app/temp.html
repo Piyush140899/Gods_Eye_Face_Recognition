@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+
+{% block content %}
+ {{MEDIA_URL}}
+   	{% for item in a %}
+    <img src="{{MEDIA_URL}}{{ item.path }}" height="100" style="margin-bottom: 5px;">
+      {% endfor %}
+{% endblock %}

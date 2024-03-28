@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<a>
+<div class="container" style="background-color: white; padding: 50px; margin-top: 100px;  border: 4px solid #000000;border-radius: 25px;">
+	<h1 align= "center">Gods Eye : Surveillance system</h1>
+	<hr>
+	<div class="container" align="center">
+		<a class="btn btn-primary"  href="{% url 'identify' %}" style="font-size: 20px; margin-bottom: 10px;margin-right: 10px;">Identify Faces</a>
+		<a class="btn btn-primary"  href="{% url 'detected' %}" style="font-size: 20px; margin-bottom: 10px;margin-right: 10px;">Detected Faces</a>
+		<a class="btn btn-primary" href="{% url 'add_emp' %}" style="font-size: 20px; margin-bottom: 10px;margin-right: 10px;">Add Person</a>
+		<a class="btn btn-primary"  href="{% url 'add_photos' %}" style="font-size: 20px; margin-bottom: 10px;margin-right: 10px;">Add photos</a><br>
+		<a class="btn btn-primary"  href="{% url 'train_model' %}" style="font-size: 20px; margin-bottom: 10px;margin-right: 10px;margin-left: 40px;">Train model</a>
+		<a class="btn btn-primary"  href="{% url 'prev_map' %}" style="font-size: 20px; margin-bottom: 10px;margin-right: 10px;">Map View</a>
+		<a class="btn btn-primary"  href="{% url 'n_plate1' %}" style="font-size: 20px; margin-bottom: 10px;margin-right: 10px;">Vehicle detection</a>
+		<a class="btn btn-primary"  href="{% url 'v_view' %}" style="font-size: 20px; margin-bottom: 10px;margin-right: 10px;">Detected Vehicles</a>
+
+	</div>
+</div>
+</a>
+{% endblock %}
